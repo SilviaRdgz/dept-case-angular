@@ -1,0 +1,83 @@
+<div class="form-container" id="form-container">
+
+  <h1>
+    Question? we are here to help!
+  </h1>
+
+  <form
+    [formGroup]="contactForm"
+    method="post"
+    (ngSubmit)="onSubmit()">
+
+    <div class="inputs-container">
+
+      <div class="input-wrapper">
+        <label for="name">
+          name
+        </label>
+        <br>
+        <input
+          type="text"
+          id="name"
+          formControlName="name"
+          required>
+        <div *ngIf="contactForm.controls.name.invalid
+          && (contactForm.controls.name.dirty
+          ||contactForm.controls.name.touched )">
+          <small>
+            Name is required
+          </small>
+        </div>
+      </div>
+
+      <div class="input-wrapper">
+        <label for="email">
+          email
+        </label>
+        <br>
+        <input
+          type="text"
+          id="email"
+          formControlName="email"
+          required>
+        <div *ngIf="contactForm.controls.email.invalid
+        && (contactForm.controls.email.dirty
+        ||contactForm.controls.email.touched )">
+          <small>
+            A valid email address is required
+          </small>
+        </div>
+      </div>
+
+      <div class="input-wrapper">
+        <label>
+          message
+        </label>
+        <br>
+        <textarea
+          type="text"
+          id="message"
+          formControlName="message"
+          style="height: 102px"
+          required>
+        </textarea>
+        <div *ngIf="contactForm.controls.message.invalid
+        && (contactForm.controls.message.dirty
+        ||contactForm.controls.message.touched )">
+          <small>
+            A message is required
+          </small>
+        </div>
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      value="send"
+      [disabled]="!contactForm.valid">
+      Send
+    </button>
+  </form>
+</div>
+
+

@@ -1,0 +1,63 @@
+@import "../../resources/sass/breakpoints";
+
+.clients {
+  background: black;
+  padding: 77px 32px;
+  position: relative;
+  bottom: -500px;
+  z-index: 30;
+
+  h1, p {
+    color: white;
+  }
+
+  h1 {
+    size: 34px;
+    margin-bottom: 32px;
+  }
+
+  p {
+    size: 18px;
+    line-height: 18px;
+  }
+
+  &__logos-container {
+    display: flex;
+    //flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 64px;
+    overflow: hidden;
+
+
+    div {
+      -webkit-animation: loop 40s infinite linear;
+      animation: loop 5s infinite linear;
+      width: fit-content;
+      @include media(">=tablet") {
+        flex: 30%;
+        text-align: center;
+      }
+    }
+
+    img {
+      width: 150px;
+      margin: 0 30px 83px 0;
+      @include media(">=tablet") {
+        flex: 50%;
+        margin: 0 100px 83px 0;
+
+      }
+      @include media(">=desktop") {
+        width: 171px;
+        margin: 0 200px 83px 0;
+      }
+    }
+  }
+}
+
+@keyframes loop {
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}

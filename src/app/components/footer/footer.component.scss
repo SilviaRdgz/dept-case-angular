@@ -1,0 +1,110 @@
+@import "../../resources/sass/breakpoints";
+
+.footer {
+  background: black;
+  color: white;
+  padding: 45px 36px;
+  position: fixed;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  z-index: 25;
+  @include media(">=tablet") {
+    bottom: 0;
+  }
+
+  .logo {
+    display: none;
+    @include media(">=1024px") {
+      display: block;
+      margin-right: 120px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 35px;
+    align-items: flex-start;
+
+    @include media(">=1024px") {
+      justify-content: left;
+      padding-bottom: 61px;
+      align-items: baseline;
+
+    }
+
+    &-links {
+      text-transform: uppercase;
+      font-size: 18px;
+      display: flex;
+      flex-direction: column;
+
+      @include media(">=1024px") {
+        flex-direction: row;
+      }
+
+      a {
+        margin-bottom: 35px;
+        margin-right: 20px;
+        color: white;
+        @include media(">=1024px") {
+          margin-bottom: 0;
+          &:hover {
+            border-bottom: 1px solid white;
+          }
+
+        }
+      }
+
+    }
+
+    .icons {
+      display: flex;
+      flex-direction: column;
+
+      img {
+        margin-bottom: 41px;
+      }
+
+      @include media(">=1024px") {
+        display: none;
+      }
+    }
+  }
+
+  &__bottom {
+
+    font-family: "Arial Narrow" !important;
+    font-size: 13px;
+    line-height: 14px;
+    color: #808080;
+    border-top: 0.5px solid grey;
+    padding-top: 45px;
+
+    @include media(">=1024px") {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    a {
+      color: #808080;
+
+      &:hover {
+        border-bottom: 1px solid #808080;
+      }
+    }
+
+    &__upper {
+      margin-bottom: 25px;
+
+      @include media(">=1024px") {
+        display: flex;
+        p {
+          margin-right: 36px;
+        }
+      }
+    }
+  }
+}
+

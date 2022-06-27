@@ -1,0 +1,121 @@
+@import "../../resources/sass/breakpoints";
+
+.form-container {
+  padding: 48px 36px;
+  position: relative;
+  background: white;
+  bottom: -500px;
+  z-index: 20;
+
+
+  @include media(">=1024px") {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  h1 {
+    font-size: 26px;
+    line-height: 26px;
+    text-transform: uppercase;
+    margin-bottom: 38px;
+
+    @include media(">=tablet") {
+      font-size: 48px;
+      line-height: 70px;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    @include media(">=tablet") {
+      margin-left: 64px;
+    }
+
+    .inputs-container {
+
+      @include media(">=tablet") {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 38px;
+      }
+
+      .input-wrapper {
+        margin-bottom: 38px;
+      }
+    }
+
+    label {
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    input {
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 0.5px solid black;
+      width: 100%;
+    }
+
+    textarea {
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      width: 100%;
+    }
+
+    button {
+      border: 1px solid #5115F7;
+      border-radius: 50px;
+      align-items: center;
+      padding: 16px 64px;
+      background: none;
+      text-transform: uppercase;
+      color: #5115F7;
+
+      @include media(">=tablet") {
+        width: 50%
+      }
+      @include media(">=1024px") {
+        cursor: pointer;
+        color: black;
+        border: 1px solid black;
+        padding: 16px 0;
+        &:hover {
+          color: #5115F7;
+          border: 1px solid #5115F7;
+        }
+      }
+      @include media(">=desktop") {
+        color: black;
+        border: 1px solid black;
+        padding: 16px 0;
+
+      }
+    }
+
+    small {
+      font-size: 16px;
+      color: #FF2929;
+
+    }
+  }
+}
+
+.show {
+  height: 95vh;
+  display: block;
+  transform: translateY(130%);
+  transition-timing-function: ease-in;
+  transition: 0.2s;
+
+  @include media(">=desktop") {
+    height: 65vh;
+  }
+
+}
+
+.hide {
+  display: none;
+}

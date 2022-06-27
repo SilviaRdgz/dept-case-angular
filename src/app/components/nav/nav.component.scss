@@ -1,0 +1,157 @@
+@import "../../resources/sass/breakpoints";
+
+.navbar {
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 16px;
+
+    .dept-logo {
+      width: 52px;
+      height: 14px;
+      @include media(">=tablet") {
+        width: 100px;
+        height: 26px;
+        margin-right: 200px;
+      }
+      @include media(">=desktop") {
+        margin-right: 200px;
+      }
+    }
+
+    .navbar-items {
+      display: none;
+      color: white;
+      text-transform: uppercase;
+
+      a {
+        margin-right: 48px;
+
+        &:hover {
+          border-bottom: 1px solid white;
+        }
+      }
+
+      &.hide-navbarItems {
+        display: none;
+      }
+
+      @include media(">=1132px") {
+        display: block;
+      }
+    }
+
+  }
+
+  button {
+    background: none;
+    border: none;
+  }
+
+  .cross-icon {
+    display: none;
+
+    &.show-cross {
+      display: block;
+    }
+  }
+
+  .burger-icon {
+    &.hide-burger {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .dots-icon {
+    &.hide-dots {
+      display: none;
+    }
+  }
+}
+
+.dropdown-menu {
+  display: none;
+  //transition:height 0.3s ease-in-out;
+  //transition-delay: 1s;
+
+
+  &.is-open {
+    display: block;
+    background: black;
+    margin-top: 70px;
+    height: 100vh;
+
+
+    ul {
+      text-align: right;
+      padding: 0 16px;
+
+      li {
+        margin-bottom: 11px;
+        font-size: 34px;
+        width: 30%;
+        transition: width 2s;
+        transition-timing-function: cubic-bezier(.17, .67, .83, .67);
+        border-bottom: 1px solid white;
+        animation: myOpenMove 1s ease-in;
+
+
+        &:hover {
+          width: 100%;
+        }
+      }
+    }
+
+  }
+
+}
+
+
+.dots-icon {
+  display: none;
+  @include media(">=tablet") {
+    display: block;
+  }
+
+}
+
+.list-container {
+  list-style: none;
+  text-transform: uppercase;
+  color: white;
+
+}
+
+.list-items {
+
+  a:hover {
+    cursor: pointer;
+  }
+}
+
+a {
+  color: white;
+}
+
+@keyframes myOpenMove {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}

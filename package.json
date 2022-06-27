@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider; ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -18,8 +18,12 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "locomotive-scroll": "^4.1.4",
+    "ngx-scrollreveal": "^3.0.0",
     "rxjs": "~6.6.0",
+    "scrollreveal": "^4.0.9",
     "tslib": "^2.3.0",
+    "web-animations-js": "^2.3.2",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

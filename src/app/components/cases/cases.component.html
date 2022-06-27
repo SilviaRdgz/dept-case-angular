@@ -1,0 +1,195 @@
+<section class="hero">
+  <div class="hero-image mask">
+    <div class="container" id="text-container" @fadeTitle>
+      <h1>Work</h1>
+      <p>A selection of projects that
+        <span>pioneer tech</span>
+        and <span>marketing</span>
+        to help brands stay ahead.
+      </p>
+    </div>
+  </div>
+  <div class="arrow">
+    <img src="assets/icons/arrow-up.png" alt="arrow-icon"/>
+  </div>
+</section>
+
+<section class="cases">
+
+  <div class="filter">
+    <div class="container">
+      <span>
+        in <a href="#">all industries</a>
+      </span>
+      <span>
+        Show me
+        <a href="#"> all work</a>
+      </span>
+    </div>
+  </div>
+
+  <!--  BLOCK OF FOUR IMAGES-->
+
+  <div class="flex">
+
+    <div class="flex-item" *ngFor="let case of topFourCases">
+      <div class="mask">
+        <img class="image" [src]="case.image" alt="dept-case-image" loading="lazy"/>
+      </div>
+      <div class="text-container">
+        <h1>
+          {{case.name}}
+        </h1>
+        <a href="#">
+          {{case.description}}
+        </a>
+        <a class="link" [href]="case.url">
+          <img src="assets/icons/ellipse.svg" loading="lazy"/>
+          Read more
+        </a>
+      </div>
+    </div>
+
+    <!--  BLOCK IMAGE AND TEXT-->
+
+    <div class="flex-item">
+      <div class="mask">
+        <img class="image" src="assets/images/silvia-head-over-wheels.png" alt="dept-case-image" loading="lazy"/>
+      </div>
+      <div class="text-container">
+        <h1>
+          Silvia Rodriguez
+        </h1>
+        <a href="#">
+          New gang member at DEPT
+        </a>
+        <a href="#" class="link">
+          <img src="assets/icons/ellipse.svg" alt="ellipse-icon" loading="lazy"/>
+          Read more
+        </a>
+      </div>
+    </div>
+    <div class="flex-item text-only">
+      <div class="text-wrapper" *ngFor="let notes of topClientNote">
+        <h1>{{notes.name}}</h1>
+        <div>
+          <p>{{notes.description}}</p>
+          <a href="#" class="link">
+            <img src="assets/icons/ellipse.svg" alt="ellipse-icon" loading="lazy"/>
+            Read more
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!--  BLOCK OF TWO CASES-->
+
+    <div class="flex-item" *ngFor="let case of topTwoCases">
+      <div class="mask">
+        <img class="image" [src]="case.image" alt="dept-case-image" loading="lazy"/>
+      </div>
+      <div class="text-container">
+        <h1>
+          {{case.name}}
+        </h1>
+        <a href="#">
+          {{case.description}}
+        </a>
+        <a class="link" [href]="case.url">
+          <img src="assets/icons/ellipse.svg" alt="ellipse-icon" loading="lazy"/>
+          Read more
+        </a>
+      </div>
+    </div>
+
+    <!--  BLOCK IMAGE AND TEXT REVERSE-->
+
+    <div class="flex-item text-only">
+      <div class="text-wrapper" *ngFor="let notes of bottomClientNote">
+        <h1>{{notes.name}}</h1>
+        <div>
+          <p>{{notes.description}}</p>
+          <a href="#" class="link">
+            <img src="assets/icons/ellipse.svg" alt="ellipse-icon" loading="lazy"/>
+            Read more
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-item">
+      <div class="mask">
+        <img class="image" src="assets/images/head-over-wheels-crew.png" alt="dept-case-image" loading="lazy"/>
+      </div>
+      <div class="text-container">
+        <h1>
+          Head Over Wheels
+        </h1>
+        <a href="#">
+          Roller discos at DEPT go viral
+        </a>
+        <a href="#" class="link">
+          <img src="assets/icons/ellipse.svg" alt="ellipse-icon" loading="lazy"/>
+          Read more
+        </a>
+      </div>
+    </div>
+
+    <!--  BLOCK FOUR CASES BOTTOM-->
+
+    <div class="flex-item" *ngFor="let case of bottomFourCases">
+      <div class="mask">
+        <img class="image" [src]="case.image" alt="dept-case-image" loading="lazy"/>
+      </div>
+      <div class="text-container">
+        <h1>
+          {{case.name}}
+        </h1>
+        <a href="#">
+          {{case.description}}
+        </a>
+        <a class="link" [href]="case.url">
+          <img src="assets/icons/ellipse.svg" alt="ellipse-icon" loading="lazy"/>
+          Read more
+        </a>
+      </div>
+    </div>
+
+    <!--  BLOCK FULL WIDTH-->
+
+    <div class="flex-item-full">
+      <div class="text">
+        <h1>“Dept helped us tell our story through a bold new identity and a robust online experience. To the tone of
+          60%
+          growth in online bookings in just one month”</h1>
+        <h2>MATTIJS TEN DRINK - CEO, TRANSAVIA</h2>
+      </div>
+    </div>
+
+    <!--  BLOCK OF TWO BOTTOM-->
+    <div class="flex-item" *ngFor="let case of bottomTwoCases">
+      <div class="mask">
+        <img class="image" [src]="case.image" alt="dept-case-image" loading="lazy"/>
+      </div>
+      <div class="text-container">
+        <h1>
+          {{case.name}}
+        </h1>
+        <a href="#">
+          {{case.description}}
+        </a>
+        <a class="link" [href]="case.url">
+          <img src="assets/icons/ellipse.svg" alt="ellipse-icon" loading="lazy"/>
+          Read more
+        </a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+

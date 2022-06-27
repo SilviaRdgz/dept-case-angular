@@ -1,0 +1,47 @@
+<nav class="navbar">
+
+  <div class="navbar__top">
+    <a href="#">
+      <img class="dept-logo" src="assets/logos/dept-white-2022.svg" alt="dept-logo" loading="lazy" @fade/>
+    </a>
+    <div class="navbar-items" [class.hide-navbarItems]="navbarItems">
+      <a href="#">
+        Work
+      </a>
+      <a href="#">
+        Culture
+      </a>
+      <a href="#">
+        services
+      </a>
+      <a href="#">
+        Insights
+      </a>
+      <a href="#">
+        careers
+      </a>
+      <a href="#">
+        contact
+      </a>
+    </div>
+
+    <button (click)="toggleMenu()" @fade>
+      <img class="burger-icon" [class.hide-burger]="burgerIcon" src="assets/icons/burger.svg" alt="burger-icon"
+           loading="lazy"/>
+      <img class="cross-icon" [class.show-cross]="crossIcon" src="assets/icons/cross.svg" alt="cross-icon"
+           loading="lazy"/>
+      <img class="dots-icon" [class.hide-dots]="dotsIcon" src="assets/icons/dots.svg" alt="dots-icon" loading="lazy"/>
+    </button>
+  </div>
+
+  <div [class.is-open]="isMenuOpen" class='dropdown-menu'>
+    <ul class="list-container"
+        *ngFor="let item of items">
+      <li class="list-items">
+        <a href="#">
+          {{item.title}}
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
