@@ -106,9 +106,6 @@
 .show {
   height: 95vh;
   display: block;
-  transform: translateY(130%);
-  transition-timing-function: ease-in;
-  transition: 0.2s;
 
   @include media(">=desktop") {
     height: 65vh;

@@ -4,14 +4,11 @@
   background: black;
   color: white;
   padding: 45px 36px;
-  position: fixed;
-  bottom: -20px;
+  position: relative;
+  bottom: -500px;
   left: 0;
   right: 0;
   z-index: 25;
-  @include media(">=tablet") {
-    bottom: 0;
-  }
 
   .logo {
     display: none;
@@ -107,4 +104,3 @@
     }
   }
 }
-

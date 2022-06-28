@@ -1,21 +1,26 @@
-# DEPT Agency Case
+# AngularDeptCase
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.8. and node v18.3.0.
-
-The goal of the assignment was to reproduce a given web design. With the given the time, I chose to focus on the following:
-
-- Make it fully responsive. Add breakpoints for mobile, tablet and desktop.
-- Add Contact form with validation and error and success states.
-- Animations on scroll, hover, on click
-- Lazyload to improve performance 
-
-Also took a couple of liberties with the design to reproduce animations of the real website and have a bit more fun with it.
-
-# How to run project
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.8.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
 ## Further help
 

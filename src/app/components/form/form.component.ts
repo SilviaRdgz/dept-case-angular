@@ -10,23 +10,6 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class FormComponent {
 
-  @HostListener('window:scroll', ["$event"])
-
-  onScroll(event: any) {
-    let modify = document.getElementById('form-container')!;
-    let pos = (document.documentElement.scrollTop || document.body.scrollTop) + document.documentElement.offsetHeight;
-    let max = document.documentElement.scrollHeight;
-
-    if ((pos > max)) {
-      modify.classList.add('show');
-      modify.classList.remove('hide');
-    } else {
-      modify.classList.remove('show');
-      modify.classList.add('hide');
-    }
-  }
-
-
   contactForm = this.fb.group({
     name: ['', Validators.required],
     email: ['', Validators.email],
