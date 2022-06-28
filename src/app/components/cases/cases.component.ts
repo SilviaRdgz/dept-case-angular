@@ -28,7 +28,6 @@ export class CasesComponent {
       modify.classList.remove('hide-text');
       modify.classList.add('show-text');
     }
-    console.log('hey')
   }
 
   topFourCases = [
