@@ -9,6 +9,8 @@ The goal of the assignment was to reproduce a given web design. With the given t
 - Animations on scroll, hover, on click
 - Lazyload to improve performance 
 
+Also took a couple of liberties with the design to reproduce animations of the real website and have a bit more fun with it.
+
 # How to run project
 
 ## Development server
